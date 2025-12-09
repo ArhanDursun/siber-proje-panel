@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>SecurePanel</title>
+  <link rel="stylesheet" href="/css/global.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-title">SecurePanel</div>
+      <nav class="sidebar-nav">
+        <a href="/" class="nav-link active">Ana Sayfa</a>
+        <a href="/login" class="nav-link">Giriş</a>
+        <a href="/register" class="nav-link">Kayıt Ol</a>
+        <a href="/dashboard" class="nav-link">Panel</a>
+        <a href="/admin" class="nav-link nav-admin">Admin</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <h1>Kontrol Paneli</h1>
+        <div class="user-info" id="current-user-info"></div>
+      </header>
+
+      <section class="grid">
+        <div class="card">
+          <div class="card-title">Hızlı Erişim</div>
+          <p style="margin-top:8px;font-size:14px;">
+            Hesabınıza giriş yaparak kullanıcı paneline; admin yetkiniz varsa yönetim ekranına erişebilirsiniz.
+          </p>
+          <div style="margin-top:12px;display:flex;gap:8px;">
+            <a href="/login" class="btn btn-primary">Giriş Yap</a>
+            <a href="/register" class="btn btn-secondary">Kayıt Ol</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Özellikler</div>
+          <ul style="margin-top:8px;font-size:13px;list-style:none;">
+            <li>• JWT tabanlı kimlik doğrulama</li>
+            <li>• Rol tabanlı erişim kontrolü</li>
+            <li>• Kullanıcı ve kaynak yönetimi</li>
+          </ul>
+        </div>
+      </section>
+
+      <footer class="footer">© 2025 SecurePanel</footer>
+    </main>
+  </div>
+
+  <script type="module">
+    import { loadCurrentUser } from "/js/common.js";
+    loadCurrentUser();
+  </script>
+</body>
+</html>

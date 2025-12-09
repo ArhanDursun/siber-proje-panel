@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Panel – SecurePanel</title>
+  <link rel="stylesheet" href="/css/global.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-title">SecurePanel</div>
+      <nav class="sidebar-nav">
+        <a href="/" class="nav-link">Ana Sayfa</a>
+        <a href="/dashboard" class="nav-link active">Panel</a>
+        <a href="/admin" class="nav-link nav-admin">Admin</a>
+      </nav>
+      <button id="logout-btn" class="btn btn-secondary" style="margin-top:auto;">Çıkış</button>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <h1>Kullanıcı Paneli</h1>
+        <div class="user-info" id="current-user-info"></div>
+      </header>
+
+      <div class="grid">
+        <div class="card">
+          <div class="card-title">Profil</div>
+          <div id="profile-content" style="margin-top:8px;font-size:14px;">Yükleniyor...</div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">Kaynaklarım</div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Başlık</th>
+                <th>Tür</th>
+              </tr>
+            </thead>
+            <tbody id="resources-tbody">
+              <tr><td colspan="3">Yükleniyor...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <footer class="footer">© 2025 SecurePanel</footer>
+    </main>
+  </div>
+
+  <script type="module" src="/js/dashboard.js"></script>
+</body>
+</html>

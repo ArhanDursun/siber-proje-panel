@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin – SecurePanel</title>
+  <link rel="stylesheet" href="/css/global.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-title">SecurePanel</div>
+      <nav class="sidebar-nav">
+        <a href="/" class="nav-link">Ana Sayfa</a>
+        <a href="/dashboard" class="nav-link">Panel</a>
+        <a href="/admin" class="nav-link nav-admin active">Admin</a>
+      </nav>
+      <button id="logout-btn" class="btn btn-secondary" style="margin-top:auto;">Çıkış</button>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <h1>Kullanıcı Yönetimi</h1>
+        <div class="user-info" id="current-user-info"></div>
+      </header>
+
+      <section class="card">
+        <div class="card-title">Kullanıcı Listesi</div>
+        <div class="card-subtitle">
+  Normal şartlarda sadece admin rolüne sahip hesaplar bu alana erişebilmelidir.
+</div>
+
+
+        <div style="margin-top:12px;display:flex;gap:8px;">
+  <button id="btn-refresh" class="btn btn-secondary">Listeyi Yenile</button>
+</div>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Kullanıcı Adı</th>
+              <th>Rol</th>
+              <th>İşlem</th>
+            </tr>
+          </thead>
+          <tbody id="users-tbody">
+            <tr><td colspan="4">Yükleniyor...</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <footer class="footer">© 2025 SecurePanel – Admin</footer>
+    </main>
+  </div>
+
+  <script type="module" src="/js/admin.js"></script>
+</body>
+</html>

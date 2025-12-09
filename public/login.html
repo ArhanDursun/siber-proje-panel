@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Giriş – SecurePanel</title>
+  <link rel="stylesheet" href="/css/global.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-title">SecurePanel</div>
+      <nav class="sidebar-nav">
+        <a href="/" class="nav-link">Ana Sayfa</a>
+        <a href="/login" class="nav-link active">Giriş</a>
+        <a href="/register" class="nav-link">Kayıt Ol</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <h1>Giriş Yap</h1>
+        <div class="user-info" id="current-user-info"></div>
+      </header>
+
+      <section class="card" style="max-width:420px;">
+        <div class="card-title">Hesabınıza Giriş Yapın</div>
+
+        <div class="form-group" style="margin-top:12px;">
+          <label for="username">Kullanıcı Adı</label>
+          <input id="username" type="text" autocomplete="username" />
+        </div>
+        <div class="form-group">
+          <label for="password">Şifre</label>
+          <input id="password" type="password" autocomplete="current-password" />
+        </div>
+        <button id="login-btn" class="btn btn-primary">Giriş</button>
+        <div id="login-msg" style="margin-top:10px;font-size:13px;"></div>
+      </section>
+
+      <footer class="footer">© 2025 SecurePanel</footer>
+    </main>
+  </div>
+
+  <script type="module" src="/js/login.js"></script>
+</body>
+</html>
