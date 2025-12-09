@@ -12,17 +12,17 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // ⚠ Bu SECRET demoda kalacak, gerçek projede .env'de tutulmalı
-const JWT_SECRET = process.env.JWT_SECRET;
-
+const JWT_SECRET =
+  process.env.JWT_SECRET || "h9G$4k!Pz2Q@8vL0#Xr7%Tn3*Wb6&Ym1";
+const MONGODB_URI =process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/siber_proje_panel";
 mongoose
-  .mongoose
-  .connect(process.env.MONGODB_URI)
+  .connect(MONGODB_URI)
   .then(() => {
-    console.log("MongoDB Atlas’a bağlandı!");
-    seedDefaultAdmin();
+    console.log("MongoDB bağlandı");
+    seedDefaultAdmin(); // bağlantı olduktan sonra admin’i üret
   })
   .catch((err) => {
-    console.error("Atlas bağlantı hatası:", err.message);
+    console.error("MongoDB bağlantı hatası:", err.message);
   });
 
 async function seedDefaultAdmin() {
